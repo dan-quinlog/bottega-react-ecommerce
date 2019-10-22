@@ -1,20 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import SignInForm from './signin-form';
+import SignInForm from "./signin-form";
 
 class SignIn extends Component {
-
-  onSubmit = (fields) => {
+  onSubmit = fields => {
     console.log(fields);
-  }
-  
+  };
+
   render() {
     return (
-      <div className='sign-in'>
-        <SignInForm onSubmit={this.onSubmit} className='sign-in__form'/>
+      <div className="sign-in">
+        <SignInForm onSubmit={this.onSubmit} className="sign-in__form" />
       </div>
     );
   }
 }
-
+16452 - 2136;
 export default SignIn;
