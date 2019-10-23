@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: 'Open Sans';
-  color: 808080;
+  color: #808080;
 }
 
 @import "./layout.scss";
@@ -21,3 +21,4 @@ body {
 @import "./auth/signup.scss";
 @import "./page-title.scss";
 @import "./form-field.scss";
+@import "./details.scss";
