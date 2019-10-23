@@ -17,5 +17,4 @@ class SignIn extends Component {
     );
   }
 }
-16452 - 2136;
 export default SignIn;
