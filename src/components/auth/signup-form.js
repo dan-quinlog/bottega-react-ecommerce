@@ -9,27 +9,24 @@ import History from '../../history';
 class SignUpForm extends Component {
   render() {
     const { className, handleSubmit } = this.props;
-    const links = [
+    const infos = [
       {
         _id: 0,
-        title: 'Not Registered? Create account here',
-        onClick: () => History.push('/signup')
+        title: 'At least 6 characters',
       },
       {
         _id: 1,
-        title: 'Forgot account email?',
-        onClick: () => console.log('forgot email')
+        title: 'At least one number',
       },
       {
         _id: 2,
-        title: 'Forgot password?',
-        onClick: () => console.log('forgot password')
+        title: 'At least one symbol',
       }
     ]
     return (
-      <form onSubmit={handleSubmit} className={`${className} sign-in-form`}>
+      <form onSubmit={handleSubmit} className={`${className} sign-up-form`}>
         <Field
-          className="sign-in-form__name"
+          className="sign-up-form__name"
           type="name"
           title="Name"
           placeholder="Name"
@@ -37,7 +34,7 @@ class SignUpForm extends Component {
           component={FormInput}
         />
         <Field
-          className="sign-in-form__email"
+          className="sign-up-form__email"
           type="email"
           title="Email"
           placeholder="Email"
@@ -45,7 +42,7 @@ class SignUpForm extends Component {
           component={FormInput}
         />
         <Field
-          className="sign-in-form__password"
+          className="sign-up-form__password"
           type="password"
           title="Password"
           placeholder="Password"
@@ -53,7 +50,7 @@ class SignUpForm extends Component {
           component={FormInput}
           />
         <Field
-          className="sign-in-form__confirm-password"
+          className="sign-up-form__confirm"
           type="password"
           title="Confirm Password"
           placeholder="Confirm Password"
@@ -62,24 +59,25 @@ class SignUpForm extends Component {
           />
 
 
-          <div className="sign-in-form__line"></div>
+          <div className="sign-up-form__line"></div>
         <Field
-          className="sign-in-form__login"
-          onClick={ () => console.log('trying to submit')}
+          className="sign-up-form__create"
+          onClick={ () => History.push('/account')}
           type="submit"
-          title="Login"
+          title="Create Account"
           name="login"
           component={FormButton}
         />
         <Field
-          className="sign-in-form__back"
-          onClick={ () => console.log('trying to got back')}
+          className="sign-up-form__back"
+          onClick={ () => History.push('/signin')}
           type="button"
           title="Back"
           name="back"
+          short={true}
           component={FormButton}
         />
-        <Details className='sign-in-form__details' title='QuickLinks' links={links} />
+        <Details className='sign-up-form__details' title='Password Requirements' infos={infos} />
       </form>
     );
   }
