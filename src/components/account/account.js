@@ -9,6 +9,19 @@ class Account extends Component {
 
   componentDidMount() {
 
+    const headerLinks = [
+      {
+        _id: 0,
+        title: 'shop',
+        path: '/shop'
+      },
+      {
+        _id: 1,
+        title: 'logout',
+        path: '/'
+      },
+    ]
+
     const navbarLinks = [
       {
         _id: 0,
@@ -24,7 +37,7 @@ class Account extends Component {
       }
     ]
 
-    this.props.setHeaderLinks([]);
+    this.props.setHeaderLinks(headerLinks);
     this.props.setNavbarLinks(navbarLinks);
   }
 
