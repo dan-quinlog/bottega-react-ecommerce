@@ -4,6 +4,18 @@
   grid-column: s/e;
 
 
-  // &__page-title {
-  // }
+  &__page-title {
+    border-bottom: 1px solid #ccc;
+  }
+  &__border-bottom {
+    border-bottom: 1px solid #f2f2f2;
+  }
+}
+
+.purchases {
+
+}
+
+.purchase-detail {
+
 }
