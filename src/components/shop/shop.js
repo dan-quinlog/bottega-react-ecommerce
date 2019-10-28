@@ -40,7 +40,9 @@ class Shop extends Component {
 
   shouldComponentUpdate(nextProps) {
     if (this.props != nextProps) {
-      this.props.setNavbarLinks(nextProps.categories, (_id) => this.props.filterProductsWithCategoryId(_id));
+      this.props.setNavbarLinks(nextProps.categories, _id =>
+        this.props.filterProductsWithCategoryId(_id)
+      );
     }
     return true;
   }
@@ -51,14 +53,25 @@ class Shop extends Component {
         {/* search bar
       product grid and componnents
       cart button */}
-        Shop
+        <div className="shop__products">
+          {this.props.filteredProducts.map(product => {
+            return (
+              <div key={product._id} className="shop-product">
+                <div className="shop-product__title">{product.title}</div>
+                <div className="shop-product__description">
+                  {product.description}
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   }
 }
 function mapStateToProps(state) {
-  const { categories } = state.shop;
-  return { categories };
+  const { categories, filteredProducts } = state.shop;
+  return { categories, filteredProducts };
 }
 
 Shop = connect(
