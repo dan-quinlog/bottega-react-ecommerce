@@ -1,0 +1,39 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Open Sans';
+  color: #808080;
+}
+
+@import "./layout.scss";
+@import "./headernavbar.scss";
+@import "./page-title.scss";
+@import "./form-field.scss";
+@import "./details.scss";
+
+//auth
+@import "./auth/signin.scss";
+@import "./auth/signup.scss";
+
+//account
+@import './account/account.scss';
+@import './account/account-information.scss';
+@import './account//purchase-history.scss';
+
+//shop
+@import './shop/shop.scss';
+@import './shop/shop-search-bar.scss';
+
+//QUANTITY
+@import './quantity.scss';
+@import './green-price-tag.scss';
