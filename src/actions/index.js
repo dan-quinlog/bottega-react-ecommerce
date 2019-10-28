@@ -6,7 +6,7 @@ import {
 
 import { fetchUserPurchases, setPurchaseDetail } from "./user";
 
-import { fetchShopCategories, fetchShopProducts, filterProductsWithCategoryId } from "./shop";
+import { fetchShopCategories, fetchShopProducts, filterProductsWithCategoryId, filterProductsWithQuery } from "./shop";
 
 export {
   setHeaderLinks,
@@ -17,4 +17,5 @@ export {
   fetchShopCategories,
   fetchShopProducts,
   filterProductsWithCategoryId,
+  filterProductsWithQuery,
 };
