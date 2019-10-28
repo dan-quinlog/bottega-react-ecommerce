@@ -2,7 +2,8 @@ import { SET_HEADER_LINKS, SET_NAVBAR_LINKS, CHANGE_NAVBAR_ACTIVE } from "../act
 
 const INITIAL_STATE = {
   headerLinks: [],
-  navbarLinks: []
+  navbarLinks: [],
+  onClick: ''
 };
 
 export default function(state = INITIAL_STATE, action) {
@@ -13,9 +14,11 @@ export default function(state = INITIAL_STATE, action) {
         headerLinks: action.payload
       };
     case SET_NAVBAR_LINKS:
+      const { links, onClick } = action.payload;
       return {
         ...state,
-        navbarLinks: action.payload
+        navbarLinks: links,
+        onClick
       };
       case CHANGE_NAVBAR_ACTIVE:
         const navbarLinks = state.navbarLinks.map(link => {
