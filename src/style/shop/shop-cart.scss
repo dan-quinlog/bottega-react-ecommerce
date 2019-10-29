@@ -3,6 +3,8 @@
   grid-template-rows: [tog-s] 40px [tog-e] 15px [con-s] 1fr [con-e];
   grid-template-columns: [s] 1fr [e];
 
+  z-index: 100;
+
   &__toggle {
     grid-row: tog-s/tog-e;
     grid-column: s/e;
