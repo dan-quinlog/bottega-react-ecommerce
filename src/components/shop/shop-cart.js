@@ -5,13 +5,7 @@ import * as actions from '../../actions';
 import CartProduct from './cart-product';
 
 
-function CartButton({ className, icon }) {
-  return (
-    <div className={`${className} cart-button`}>
-      <i className={`${icon}`} />
-    </div>
-  );
-}
+
 
 function CartContent({ className, products }) {
   let count = products.length;
@@ -40,11 +34,11 @@ class ShopCart extends Component {
   componentDidMount() {
     this.props.fetchCartProducts();
   }
+  
   render() {
     const { className } = this.props;
     return (
-      <div className={`${className} shop-cart`}>
-        <CartButton className="shop-cart__toggle" icon="fas fa-times" />
+      <div id='shop-cart' className={`${className} shop-cart cart-hidden`}>
         <CartContent
           className="shop-cart__content"
           products={this.props.cartProducts}

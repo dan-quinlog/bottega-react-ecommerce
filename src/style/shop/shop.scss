@@ -23,4 +23,15 @@
     width: 100%;
     justify-self: center;
   }
+  
+  &__cart {
+    position: absolute;
+    top: 215px;
+    right: 0px;
+  }
+  &__cart-button {
+    position: absolute;
+    top: 159px;
+    right: 0px;
+  }
 }
