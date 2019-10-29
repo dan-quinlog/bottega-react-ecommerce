@@ -51,3 +51,36 @@
     display: grid;
   }
 }
+
+.cart-footer {
+  &__checkout {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 38px;
+    width: 183px;
+    border-radius: 20px;
+    background-color: #00cb79;
+    color: white;
+    font-weight: 600;
+    font-size: 1.6rem;
+
+    transition: all 0.3x ease;
+
+    &:hover {
+      transform: scale(0.97);
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &__subtotal {
+
+  }
+  &__price {
+
+  }
+}
