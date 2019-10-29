@@ -5,12 +5,13 @@
   grid-template-rows: 1px [search-bar-s] 38px [search-bar-e products-s] 1fr [products-e];
   grid-template-columns: [s] minmax(100px, 1035px) [e];
   gap: 57px;
+  justify-content: center;
 
   &__search-bar {
     grid-row: search-bar-s/search-bar-e;
     grid-column: s/e;
   }
-  
+
   &__products {
     grid-row: products-s/products-e;
     grid-column: s/e;
