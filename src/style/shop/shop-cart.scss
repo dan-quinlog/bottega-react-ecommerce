@@ -39,7 +39,7 @@
 }
 .cart-content {
   display: grid;
-  grid-template-rows: 25px [title-s] 30px [title-e] 50px [products-s] 1fr [products-e footer-s] 113px [footer-e];
+  grid-template-rows: 25px [title-s] 40px [title-e products-s] 1fr [products-e footer-s] 113px [footer-e];
   grid-template-columns: 30px [s] 1fr [e] 30px;
   
   & > * {
@@ -55,7 +55,9 @@
   }
   &__products {
     grid-row: products-s/products-e;
+    padding-top: 50px;
     display: grid;
+    overflow-y: scroll;
   }
   &__footer {
     grid-row: footer-s/footer-e;
