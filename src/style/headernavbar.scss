@@ -18,7 +18,7 @@
 
     display: grid;
     grid-template-rows: [s] 1fr [e];
-    grid-column-gap: 47px;
+    column-gap: 47px;
 
     color: #333;
     font-size: 16px;
@@ -45,7 +45,7 @@
   grid-template-rows: [s] 1fr [e];
   align-items: center;
   justify-content: center;
-  grid-column-gap: 40px;
+  column-gap: 40px;
 
   color: #e6e6e6;
   font-size: 18px;

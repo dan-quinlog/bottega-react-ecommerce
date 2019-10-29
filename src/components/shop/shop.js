@@ -7,24 +7,6 @@ import ShopProduct from './shop-product';
 
 class Shop extends Component {
   componentDidMount() {
-    //set header links
-    //fetch shop products action creator
-    //fetch navbar links
-    //set navbar links
-    //filter product with links
-
-    // const headerLinks = [
-    //   {
-    //     _id: 0,
-    //     title: "shop",
-    //     path: "/shop"
-    //   },
-    //   {
-    //     _id: 1,
-    //     title: "logout",
-    //     path: "/"
-    //   }
-    // ];
 
     const headerLinks = [
       {
@@ -38,6 +20,7 @@ class Shop extends Component {
     this.props.fetchShopCategories();
 
     this.props.fetchShopProducts();
+    this.props.filterProductsWithCategoryId(0);
   }
 
   shouldComponentUpdate(nextProps) {
@@ -56,9 +39,6 @@ class Shop extends Component {
   render() {
     return (
       <div className="shop">
-        {/* search bar
-      product grid and componnents
-      cart button */}
         <ShopSearchBar className="shop__search-bar" onSubmit={this.onSubmit} />
         <div className="shop__products">
           {this.props.filteredProducts.map(product => {

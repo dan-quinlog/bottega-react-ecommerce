@@ -2,12 +2,13 @@
   input {
     font-size: 20px;
     color: #808080;
-    
+
     height: 40px;
     width: 100%;
     border: 1px solid #e6e6e6;
     border-radius: 20px;
-    
+
+    text-indent: 50px;
 
     &::placeholder {
       color: #ccc;
@@ -15,6 +16,7 @@
     &:focus {
       outline: none;
     }
+    
   }
 }
 
@@ -32,6 +34,5 @@
   &__input {
     grid-row: s/e;
     grid-column: 1 / e;
-    padding-left: 50px;
   }
 }

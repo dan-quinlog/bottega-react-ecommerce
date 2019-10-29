@@ -26,7 +26,8 @@ export function fetchShopCategories() {
     payload: [
       {
         _id: 0,
-        title: "All"
+        title: "All",
+        active: true
       },
       {
         _id: 1,

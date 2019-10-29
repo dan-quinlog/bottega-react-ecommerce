@@ -1,6 +1,6 @@
 .details {
   display: grid;
-  grid-row-gap: 13px;
+  row-gap: 13px;
 
   &__title {
     padding-bottom: 7px;
@@ -11,7 +11,7 @@
 
   &__links {
     display: grid;
-    grid-row-gap: 10px;
+    row-gap: 10px;
     font-size: 14px;
 
     & > * {
