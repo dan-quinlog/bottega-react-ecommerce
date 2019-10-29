@@ -8,17 +8,16 @@
   &__image {
     grid-row: s/e;
     grid-column: image-s/image-e;
-    
   }
   &__title {
     grid-row: s/m;
     grid-column: title-s/title-e;
     align-self: start;
-    
   }
   &__quantity {
     grid-row: m/e;
     grid-column: quantity-s/quantity-e;
+
     .quantity__count {
       color: white;
     }
@@ -31,6 +30,5 @@
     grid-row: m/e;
     grid-column: price-s/price-e;
     align-self: center;
-
   }
 }
