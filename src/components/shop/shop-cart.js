@@ -49,7 +49,7 @@ class ShopCart extends Component {
 }
 
 function mapStateToProps(state) {
-  const { cartProducts } = state.users;
+  const { cartProducts } = state.user;
   return{
     cartProducts
   }

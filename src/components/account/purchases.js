@@ -33,7 +33,7 @@ class Purchases extends Component {
 }
 
 function mapStateToProps(state) {
-  const { purchases } = state.users;
+  const { purchases } = state.user;
   return { purchases };
 }
 

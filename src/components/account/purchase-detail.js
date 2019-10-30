@@ -55,7 +55,7 @@ class PurchaseDetail extends Component {
 }
 
 function mapStateToProps(state) {
-  const { purchaseDetail } = state.users;
+  const { purchaseDetail } = state.user;
   return {
     ...purchaseDetail
   };
