@@ -13,6 +13,9 @@ html {
 body {
   font-family: 'Open Sans';
   color: #808080;
+
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 @import "./layout.scss";
