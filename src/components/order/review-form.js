@@ -12,10 +12,10 @@ class ReviewForm extends Component {
     return (
       <form onSubmit={handleSubmit} className={`${className} review-form`}>
         
-          <div className="review-form__line"></div>
+        <div className="review-form__line"></div>
         <Field
           className="review-form__proceed"
-          onClick={ () => History.push('/account')}
+          onClick={ () => History.push('/signin')}
           type="submit"
           title="Proceed to Checkout"
           name="proceed"
