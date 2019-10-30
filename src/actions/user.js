@@ -1,9 +1,21 @@
-import { SET_USER_PURCHASES, SET_PURCHASE_DETAIL, SET_CART_PRODUCTS } from "./types";
+import {
+  SET_USER_PURCHASES,
+  SET_PURCHASE_DETAIL,
+  SET_CART_PRODUCTS,
+  ADD_CART_PRODUCT
+} from "./types";
 
 export function setPurchaseDetail(_id) {
   return {
     type: SET_PURCHASE_DETAIL,
     payload: _id
+  };
+}
+
+export function addCartProduct(product) {
+  return {
+    type: ADD_CART_PRODUCT,
+    payload: product
   };
 }
 
@@ -32,39 +44,6 @@ export function fetchCartProducts() {
           belongsTo: [0, 6]
         },
         quantity: 1
-      },
-      {
-        _id: 2,
-        product: {
-          _id: 4,
-          title: "JavaScript Development",
-          description: "placeholder description text",
-          price: "1.99",
-          belongsTo: [0, 1]
-        },
-        quantity: 4
-      },
-      {
-        _id: 3,
-        product: {
-          _id: 5,
-          title: "User Experience Design",
-          description: "placeholder description text",
-          price: "1.99",
-          belongsTo: [0, 3]
-        },
-        quantity: 2
-      },
-      {
-        _id: 4,
-        product: {
-          _id: 6,
-          title: "Advanced OOP",
-          description: "placeholder description text",
-          price: "1.99",
-          belongsTo: [0, 6]
-        },
-        quantity: 3
       }
     ]
   };
