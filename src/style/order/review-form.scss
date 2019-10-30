@@ -5,6 +5,10 @@
     grid-row: products-s/products-e;
     overflow-y: scroll;
     
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 80px);
+    row-gap: 12px;
+
   }
   &__line {
     grid-row: line-s/line-e;
