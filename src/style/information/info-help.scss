@@ -5,10 +5,20 @@
 }
 
 .info-title {
+  display: grid;
+  grid-template-rows: [s] 1fr [e];
+  grid-template-columns: [s] 1fr [m] 1fr [e];
+  align-items: center;
+
   &__title {
+    grid-column: s/m;
+    grid-row: s/e;
     font-size: 14px;
   }
   &__value {
+    grid-column: m/e;
+    grid-row: s/e;
+    justify-self: end;
     color: #00cb79;
     font-weight: 600;
     font-size: 18px;
@@ -16,8 +26,16 @@
 }
 
 .info-title-green {
-  &__title {
+  .info-title__title {
     font-weight: 600;
     color: #00cb79;
   }
+}
+
+.order-summary {
+  width: 200px;
+  height: 150px;
+  display: grid;
+  grid-template-rows: 30px 24px 24px 46px;
+  row-gap: 5px;
 }
