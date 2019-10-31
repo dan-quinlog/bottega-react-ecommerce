@@ -72,7 +72,7 @@ class ShippingForm extends Component {
         <div className="shipping-form__line"></div>
         <Field
           className="shipping-form__use-this-address"
-          onClick={() => History.push("/payment")}
+          onClick={() => History.push("/information/payment")}
           type="submit"
           title="Use This Address"
           name="use-this-address"
