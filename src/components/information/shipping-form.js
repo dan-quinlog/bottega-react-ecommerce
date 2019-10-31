@@ -51,7 +51,7 @@ class ShippingForm extends Component {
           name="zipcode"
           component={FormInput}
         />
-        <Field
+        {/* <Field
           className="shipping-form__password"
           type="password"
           title="Password"
@@ -66,7 +66,7 @@ class ShippingForm extends Component {
           placeholder="Confirm Password"
           name="confirm"
           component={FormInput}
-        />
+        /> */}
 
         <div className="shipping-form__line"></div>
         <Field
