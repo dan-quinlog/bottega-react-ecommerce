@@ -2,9 +2,11 @@ import React, { Component } from "react";
 
 import { reduxForm, Field } from "redux-form";
 
+import { connect } from "react-redux";
+
 import { FormInput, FormButton } from "../form-fields";
 import History from "../../history";
-import OrderSummary from './order-summary';
+import OrderSummary from "./order-summary";
 import { UnderlinedTitle } from "./info-help";
 
 class PaymentForm extends Component {
@@ -63,16 +65,30 @@ class PaymentForm extends Component {
           short={true}
           component={FormButton}
         />
-        <OrderSummary className='payment-form__order-summary' />
-        <div className='payment-form__shipping-info shipping-info'>
-          <UnderlinedTitle className='shipping-info__title' title='Shipping To' />
-          <div className='shipping-info__name small-text'>Jordan Hudgens</div>
-          <div className='shipping-info__address small-text'>an address goes here</div>
+        <OrderSummary className="payment-form__order-summary" />
+        <div className="payment-form__shipping-info shipping-info">
+          <UnderlinedTitle
+            className="shipping-info__title"
+            title="Shipping To"
+          />
+          <div className="shipping-info__name small-text">
+            {this.props.name}
+          </div>
+          <div className="shipping-info__address small-text">
+            {this.props.address}
+          </div>
         </div>
       </form>
     );
   }
 }
+
+function mapStateToProps(state) {
+  const { name, address } = state.user.user;
+  return { name, address };
+}
+
+PaymentForm = connect(mapStateToProps)(PaymentForm);
 
 PaymentForm = reduxForm({
   form: "PaymentForm"
