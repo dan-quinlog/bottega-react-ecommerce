@@ -38,7 +38,6 @@
     grid-column: 1/-1;
     border-top: 1px solid #ccc;
     margin-bottom: 24px;
-    
   }
   &__back {
     grid-row: buttons-s/buttons-e;
@@ -51,5 +50,29 @@
     grid-row: name-s;
     grid-column: pay-complete-s/-1;
     justify-self: end;
+  }
+  &__shipping-info {
+    grid-row: name-s;
+    grid-column: pay-complete-s/-1;
+    justify-self: end;
+    transform: translateY(175px);
+
+  }
+}
+
+.small-text {
+  font-size: 14px;
+}
+
+.shipping-info {
+  width: 200px;
+  height: 150px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30px 24px 24px;
+  row-gap: 5px;
+
+  & > * {
+    grid-column: 1/-1;
   }
 }
